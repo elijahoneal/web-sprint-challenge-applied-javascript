@@ -15,14 +15,15 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
-  const tabTopics = document.createElement('div').classList.add('topics')
- const tab = topics.map( topic => {
-    document.createElement('div').classList.add('tab').textContent = topic
-  })
+  const tabTopics = document.createElement('div')
+  tabTopics.classList.add('topics')
+ const tab = document.createElement('div')
+ tab.classList.add('tab')
+   tab.textContent = topics
  
   
   tabTopics.appendChild(tab)
-
+  console.log(tabTopics)
   return tabTopics
 }
 
@@ -36,7 +37,6 @@ const tabsAppender = (selector) => {
   //
   axios.get( `https://lambda-times-api.herokuapp.com/topics`)
   .then( res => {
-    console.log(res.data.topics)
     const obj = res.data.topics
    obj.map( topic => {
      const addTopic = document.querySelector(selector)

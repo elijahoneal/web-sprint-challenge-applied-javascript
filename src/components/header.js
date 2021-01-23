@@ -36,7 +36,6 @@ const headerAppender = (selector) => {
   //
  
  const newHeader = Header('SummerJam','June','95degrees'); 
- console.log(selector)
    const addHeader = document.querySelector(selector)
    return addHeader.appendChild(newHeader)
 }
