@@ -42,8 +42,8 @@ const Card = (article) => {
   newCard.appendChild(newHeadline)
   newCard.appendChild(newAuthor)
   newCard.appendChild(span)
-  newCard.addEventListener('click' , ((e) => {
-    console.log(e.target.newHeadline)
+  newCard.addEventListener('click' , (() => {
+    console.log(article.headline)
   }))
   return newCard
 }
