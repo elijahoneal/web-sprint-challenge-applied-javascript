@@ -23,7 +23,6 @@ const Tabs = (topics) => {
  
   
   tabTopics.appendChild(tab)
-  console.log(tabTopics)
   return tabTopics
 }
 
